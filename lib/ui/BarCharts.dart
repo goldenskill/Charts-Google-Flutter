@@ -1,5 +1,7 @@
 
+import 'package:charts_google/ui/Charts/Charts/BarCharts/GroupedBarChart.dart';
 import 'package:charts_google/ui/Charts/Charts/BarCharts/SimpleBarChart.dart';
+import 'package:charts_google/ui/Charts/Charts/BarCharts/StackedBarChart.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,6 +22,8 @@ class _BarChartsState extends State<BarCharts> {
       body: new PageView(
         children: <Widget>[
           itemPageView(SimpleBarChart.withSampleData(), "SimpleBarChart"),
+          itemPageView(StackedBarChart.withSampleData(), "StackedBarChart"),
+          itemPageView(GroupedBarChart.withSampleData(), "GroupedBarChart"),
         ],
       ),
     );

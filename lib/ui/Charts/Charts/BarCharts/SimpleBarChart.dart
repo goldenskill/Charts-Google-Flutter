@@ -17,7 +17,7 @@ class SimpleBarChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Charts.BarChart(
         listCar,
-        animate: false);
+        animate: true);
   }
 }
 

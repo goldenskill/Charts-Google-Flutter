@@ -1,3 +1,4 @@
+import 'package:charts_google/ui/Charts/Charts/BarCharts/StackedBarChart.dart';
 import 'package:charts_google/ui/Charts/Charts/LineCharts/SimpleLineChart.dart';
 import 'package:flutter/material.dart';
 
