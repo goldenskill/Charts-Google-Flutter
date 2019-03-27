@@ -29,7 +29,7 @@ getData(){
 
   ];
 
-  return [Charts.Series<Car, String>(
+  return [ new Charts.Series<Car, String>(
     data: carList,
     id: "Car Year",
     colorFn: (_, __) => Charts.MaterialPalette.blue.shadeDefault,
