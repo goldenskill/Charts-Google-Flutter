@@ -1,16 +1,13 @@
-
-import 'package:charts_google/ui/Charts/Charts/BarCharts/SimpleBarChart.dart';
+import 'package:charts_google/ui/Charts/Charts/PieCharts/SimplePieChart.dart';
 import 'package:flutter/material.dart';
 
-
-class BarCharts extends StatefulWidget {
+class PieCharts extends StatefulWidget {
   @override
-  _BarChartsState createState() => _BarChartsState();
+  _PieChartsState createState() => _PieChartsState();
 }
 
-class _BarChartsState extends State<BarCharts> {
-  String typeChart = "SimpleBarChart";
-
+class _PieChartsState extends State<PieCharts> {
+  String typeChart = "Simple Pie";
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -19,7 +16,7 @@ class _BarChartsState extends State<BarCharts> {
       ),
       body: new PageView(
         children: <Widget>[
-          itemPageView(SimpleBarChart.withSampleData(), "SimpleBarChart"),
+          itemPageView(SimplePieChart.withSampleData(), "SimpleBarChart"),
         ],
       ),
     );
@@ -34,4 +31,3 @@ class _BarChartsState extends State<BarCharts> {
     );
   }
 }
-

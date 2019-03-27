@@ -1,4 +1,5 @@
 import 'package:charts_google/ui/BarCharts.dart';
+import 'package:charts_google/ui/PieCharts.dart';
 import 'package:flutter/material.dart';
 
 class InitPage extends StatelessWidget {
@@ -18,16 +19,23 @@ class InitPage extends StatelessWidget {
               new Center(
                 child: new RaisedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        new MaterialPageRoute(builder: (context) => BarCharts()));
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => BarCharts()));
                   },
                   child: new Text("Bar Charts"),
                 ),
               ),
               new Center(
                 child: new RaisedButton(
-                  onPressed: () {},
-                  child: new Text("Item"),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => PieCharts()));
+                  },
+                  child: new Text("Pie Charts"),
                 ),
               ),
               new Center(
