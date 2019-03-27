@@ -1,3 +1,4 @@
+import 'package:charts_google/ui/Charts/Charts/PieCharts/PieOutsideLabelChart.dart';
 import 'package:charts_google/ui/Charts/Charts/PieCharts/SimplePieChart.dart';
 import 'package:flutter/material.dart';
 
@@ -16,16 +17,14 @@ class _PieChartsState extends State<PieCharts> {
       ),
       body: new PageView(
         children: <Widget>[
-          itemPageView(SimplePieChart.withSampleData(), "SimpleBarChart"),
+          itemPageView(SimplePieChart.withSampleData()),
+          itemPageView(PieOutsideLabelChart.withSampleData()),
         ],
       ),
     );
   }
 
-  Widget itemPageView(Widget widget, title){
-    setState(() {
-      typeChart = title;
-    });
+  Widget itemPageView(Widget widget){
     return new Padding(padding: new EdgeInsets.all(10),
       child: widget,
     );
