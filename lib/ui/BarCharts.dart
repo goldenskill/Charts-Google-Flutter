@@ -2,6 +2,7 @@
 import 'package:charts_google/ui/Charts/Charts/BarCharts/GroupedBarChart.dart';
 import 'package:charts_google/ui/Charts/Charts/BarCharts/GroupedStackedBarChart.dart';
 import 'package:charts_google/ui/Charts/Charts/BarCharts/SimpleBarChart.dart';
+import 'package:charts_google/ui/Charts/Charts/BarCharts/SimpleSeriesLegend.dart';
 import 'package:charts_google/ui/Charts/Charts/BarCharts/StackedBarChart.dart';
 import 'package:flutter/material.dart';
 
@@ -35,6 +36,9 @@ class _BarChartsState extends State<BarCharts> {
             case 3:
               typeChart = "GroupedStackedBarChart";
               break;
+              case 4:
+              typeChart = "SimpleSeriesLegend";
+              break;
           }
           setState(() {
 
@@ -45,6 +49,7 @@ class _BarChartsState extends State<BarCharts> {
           itemPageView(StackedBarChart.withSampleData()),
           itemPageView(GroupedBarChart.withSampleData()),
           itemPageView(GroupedStackedBarChart.withSampleData()),
+          itemPageView(SimpleSeriesLegend.withSampleData()),
         ],
       ),
     );
