@@ -1,5 +1,6 @@
 
 import 'package:charts_google/ui/Charts/Charts/BarCharts/GroupedBarChart.dart';
+import 'package:charts_google/ui/Charts/Charts/BarCharts/GroupedStackedBarChart.dart';
 import 'package:charts_google/ui/Charts/Charts/BarCharts/SimpleBarChart.dart';
 import 'package:charts_google/ui/Charts/Charts/BarCharts/StackedBarChart.dart';
 import 'package:flutter/material.dart';
@@ -20,19 +21,36 @@ class _BarChartsState extends State<BarCharts> {
         title: new Text("Bar Charts $typeChart"),
       ),
       body: new PageView(
+        onPageChanged: (index) {
+          switch(index){
+            case 0:
+              typeChart = "SimpleBarChart";
+              break;
+            case 1:
+              typeChart = "StackedBarChart";
+              break;
+            case 2:
+              typeChart = "GroupedBarChart";
+              break;
+            case 3:
+              typeChart = "GroupedStackedBarChart";
+              break;
+          }
+          setState(() {
+
+          });
+        },
         children: <Widget>[
-          itemPageView(SimpleBarChart.withSampleData(), "SimpleBarChart"),
-          itemPageView(StackedBarChart.withSampleData(), "StackedBarChart"),
-          itemPageView(GroupedBarChart.withSampleData(), "GroupedBarChart"),
+          itemPageView(SimpleBarChart.withSampleData()),
+          itemPageView(StackedBarChart.withSampleData()),
+          itemPageView(GroupedBarChart.withSampleData()),
+          itemPageView(GroupedStackedBarChart.withSampleData()),
         ],
       ),
     );
   }
 
-  Widget itemPageView(Widget widget, title){
-    setState(() {
-      typeChart = title;
-    });
+  Widget itemPageView(Widget widget){
     return new Padding(padding: new EdgeInsets.all(10),
       child: widget,
     );
